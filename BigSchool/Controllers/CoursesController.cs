@@ -1,10 +1,7 @@
 ﻿using BigSchool.Models;
 using BigSchool.Models.ViewModels;
 using Microsoft.AspNet.Identity;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace BigSchool.Controllers
@@ -30,7 +27,7 @@ namespace BigSchool.Controllers
                 Categories = _dbContext.Categories.ToList()
             };
 
-            return View(viewModel);
+            return View("Create",viewModel);
         }
 
         [Authorize]
