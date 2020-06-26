@@ -1,0 +1,40 @@
+﻿@model List<lab.Models.Following>
+
+@{
+    ViewBag.Title = "FollowingMe";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>FollowingMe</h2>
+
+<table class="table">
+<tr>
+    <th style="background-color:#ffd800;">
+     Tên
+    </th>
+    <th style="background-color:#ffd800;">
+      Email
+    <th style="background-color:#ffd800;">
+        Chi tiết
+    </th>
+
+
+
+</tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Followee.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Followee.Email)
+        </td>
+        <td>
+            
+        </td>
+
+    </tr>
+}
+</table>
